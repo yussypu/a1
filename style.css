@@ -1,25 +1,65 @@
-body, figure, h1, h2, h3, p, ul, ol, dl, form {
+body, figure, h1, h2, h3, p, ul, dl, form {
     margin: 0;
     padding: 0;
+    margin-right: 10px; 
 }
 
 body {
     font-family: 'Times New Roman', serif;
     line-height: 1.6;
     margin: 20px;
-    background-color: #f8f8f8;
     color: #333;
+    background-repeat: repeat-x;
+    text-align: center;
+    text-indent: 10px;
+    background: url(https://www.uvaguides.org/wp-content/uploads/2023/04/pastel-green-color-solid-background-1920x1080-1.png);
 }
 
 h1, h2, h3 {
-    color: #007BFF;
-    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 1px;
+    font-variant: small-caps;
+    text-align: center;
+    color: #2C610E;
+    text-decoration: underline overline white;
+    font-family: Copperplate, fantasy;
+}
+
+h2, caption {
+    font-variant: small-caps;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    border-style: solid;
+    border-width: medium;
+    border-color: green;
+    background-color: #779553;
+}
+
+h3 {
+    font: 18px monospace;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: underline;
+}
+
+p {
+    font-style: normal;
+    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    caption-side: bottom; 
 }
 
 th, td {
@@ -29,12 +69,49 @@ th, td {
 }
 
 img {
-    max-width: 100%;
+    max-width: 150px;
     height: auto;
+    float: left;
+    vertical-align: middle; 
+}
+
+td ul {
+    list-style-position: inside;
+    margin-left: 1em;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-image: url('your-list-image-url.png'); 
 }
 
 form {
     margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+caption {
+    font-size: 30px;
+}
+
+a:link {
+    color: #7F5310;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #779553;
+}
+
+a:active {
+    color: #ddd;
+}
+
+a:focus {
+    color: #26390E;
 }
 
 @media print {
@@ -45,6 +122,10 @@ form {
 
     h1, h2, h3 {
         color: #000;
+    }
+
+    h1 {
+        page-break-before: always;
     }
 
     table {
@@ -60,13 +141,20 @@ form {
     }
 
     img {
-        max-width: 100%;
+        max-width: 100px;
         height: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     form {
-        display: none; 
+        display: none;
     }
+
+    footer {
+        page-break-after: always;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -85,4 +173,13 @@ form {
     form {
         margin-top: 10px;
     }
+}
+
+th, td {
+    border-color: #999;
+    border-style: solid;
+}
+
+table {
+    border-spacing: 5px;
 }
